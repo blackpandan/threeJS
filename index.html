@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test for 3d</title>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="styles/main.css" />
+</head>
+<body>
+	<main class="controller">
+		<div class="overlay">
+			<div class="grid">
+				<div class="des" id="des">
+					<p id="desText">upload 3d file or png file</p>
+					<img src="" id="desImg"/> 
+				</div>
+				<canvas id="c" class="canvas"></canvas>	
+			</div>
+			<form class="form">
+				<input type="file" id="collector" class="form__collector" hidden/>
+				<label for="collector" class="form__label">choose file</label>
+				<span class="form__indicator" id="indicator">No File Selected</span>
+			</form>
+		</div>
+	</main>
+	<script src="scripts/main.js" type="module"></script>
+</body>
+</html>

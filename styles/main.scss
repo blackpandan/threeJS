@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.controller{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;	
+	padding: 0 5vmin 0 5vmin 0;
+}
+
+.grid{
+	display: grid;
+	grid-template-columns:1fr;
+	grid-template-rows: 1fr;
+}
+
+.des{
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
+	grid-column: 1 / 1;
+	margin: 5vmin 0 0 0;
+	width: 60vmin;
+	height: 60vmin;
+	border: 1px solid lighten($color: grey, $amount: 35);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	background-color: inherit;
+
+	&Img{
+		max-width: 60vmin;
+	}
+}
+
+.canvas{
+	grid-row: 1/2;
+	grid-column: 1/2;
+	margin: 5vmin 0 0 0;
+	width: 60vmin;
+	height: 60vmin;
+	background-color: none;
+	z-index: 1;
+	border: 1px solid darken($color: white, $amount: 10);
+}
+
+.form{
+	margin: 2em 0 0 0;
+
+	&__collector::file-selector-button{
+		background-color: turquoise;
+		border: 0px solid grey;
+		padding: 8px 10px 8px 10px;
+		border-radius: 5px;
+	}
+	&__label{
+		background-color: indigo;
+		color: white;
+		padding: 0.5em 1em 0.5em 1em;
+		border-radius: 5px;
+		cursor: pointer;
+	
+	}
+
+}
