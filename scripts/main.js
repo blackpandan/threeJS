@@ -33,7 +33,7 @@ selector.addEventListener("change", function(){
 
 
 	
-	}else if(this.files[0].type == "application/sla"){
+	}else{
 		
 		canvas.style.zIndex = "2";
 		canvas.style.visibility = "visible";
@@ -45,19 +45,21 @@ selector.addEventListener("change", function(){
 		console.log(typeof(selectedFile));
 		loadee(selectedFile);
 	
-	}else {	
-		if (desText.style.display == "none"){
-			console.log("yeah its none");
-			desText.style.display = "block";
-		}
-		desImg.style.display = "none";
-		console.log("not valid");
-		canvas.style.zIndex = "1";
-		canvas.style.visibility = "hidden";
-		des.style.visibility = "visible";
-		des.style.zIndex = "2";
-		desText.textContent = " please select a .stl file or a png file";	
 	}
+
+//	else {	
+	//	if (desText.style.display == "none"){
+		//	console.log("yeah its none");
+		//	desText.style.display = "block";
+	//	}
+		//desImg.style.display = "none";
+		//console.log("not valid");
+		//canvas.style.zIndex = "1";
+		//canvas.style.visibility = "hidden";
+		//des.style.visibility = "visible";
+	//	des.style.zIndex = "2";
+	//	desText.textContent = " please select a .stl file or a png file";	
+//	}
 });
 
 const scene = new THREE.Scene();
